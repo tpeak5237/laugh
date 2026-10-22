@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-22",
+  "deploymentVersion": "0673c4f6-88e2-4384-b859-57084849d565",
+  "sourceCommit": "be686585db4f765e671ec8f30a2e9144fc626927",
+  "rows": [
+    {
+      "browser": "chromium",
+      "viewport": "mobile",
+      "status": 200,
+      "url": "https://laugh.theerapat.org/",
+      "tls": {
+        "issuer": "WE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "theerapat.org",
+        "validFrom": 1792667004,
+        "validTo": 1800446598
+      },
+      "initialLength": 50,
+      "rerollChanged": true,
+      "maxLength": 10000,
+      "copyStatus": "คัดลอกเสียงขำ 50 หลักแล้ว ส่งต่อได้เลย",
+      "providerNotices": [],
+      "errors": [],
+      "screenshotToolErrors": [],
+      "badAssets": [],
+      "externalRequests": [],
+      "overflow": false,
+      "headers": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+        "frame": "DENY",
+        "nosniff": "nosniff",
+        "hsts": "max-age=31536000"
+      },
+      "matchesLocalHTML": true
+    },
+    {
+      "browser": "chromium",
+      "viewport": "desktop",
+      "status": 200,
+      "url": "https://laugh.theerapat.org/",
+      "tls": {
+        "issuer": "WE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "theerapat.org",
+        "validFrom": 1792667004,
+        "validTo": 1800446598
+      },
+      "initialLength": 50,
+      "rerollChanged": true,
+      "maxLength": 10000,
+      "copyStatus": "คัดลอกเสียงขำ 50 หลักแล้ว ส่งต่อได้เลย",
+      "providerNotices": [],
+      "errors": [],
+      "screenshotToolErrors": [],
+      "badAssets": [],
+      "externalRequests": [],
+      "overflow": false,
+      "headers": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+        "frame": "DENY",
+        "nosniff": "nosniff",
+        "hsts": "max-age=31536000"
+      },
+      "matchesLocalHTML": true
+    },
+    {
+      "browser": "webkit",
+      "viewport": "mobile",
+      "status": 200,
+      "url": "https://laugh.theerapat.org/",
+      "tls": {
+        "protocol": "TLS 1.3",
+        "subjectName": "theerapat.org",
+        "validFrom": 1792667004,
+        "validTo": 1800446598
+      },
+      "initialLength": 50,
+      "rerollChanged": true,
+      "maxLength": 10000,
+      "copyStatus": "คัดลอกเสียงขำ 50 หลักแล้ว ส่งต่อได้เลย",
+      "providerNotices": [],
+      "errors": [],
+      "screenshotToolErrors": [
+        {
+          "phase": "screenshot",
+          "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+        }
+      ],
+      "badAssets": [],
+      "externalRequests": [],
+      "overflow": false,
+      "headers": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+        "frame": "DENY",
+        "nosniff": "nosniff",
+        "hsts": "max-age=31536000"
+      },
+      "matchesLocalHTML": true
+    },
+    {
+      "browser": "webkit",
+      "viewport": "desktop",
+      "status": 200,
+      "url": "https://laugh.theerapat.org/",
+      "tls": {
+        "protocol": "TLS 1.3",
+        "subjectName": "theerapat.org",
+        "validFrom": 1792667004,
+        "validTo": 1800446598
+      },
+      "initialLength": 50,
+      "rerollChanged": true,
+      "maxLength": 10000,
+      "copyStatus": "คัดลอกเสียงขำ 50 หลักแล้ว ส่งต่อได้เลย",
+      "providerNotices": [],
+      "errors": [],
+      "screenshotToolErrors": [
+        {
+          "phase": "screenshot",
+          "message": "Refused to apply a stylesheet because its hash, its nonce, or 'unsafe-inline' does not appear in the style-src directive of the Content Security Policy."
+        }
+      ],
+      "badAssets": [],
+      "externalRequests": [],
+      "overflow": false,
+      "headers": {
+        "csp": "default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",
+        "frame": "DENY",
+        "nosniff": "nosniff",
+        "hsts": "max-age=31536000"
+      },
+      "matchesLocalHTML": true
+    }
+  ]
+}

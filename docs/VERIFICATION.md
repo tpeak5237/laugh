@@ -22,9 +22,9 @@ Development-only images live in ignored `.impeccable/review/`: mobile, tablet an
 
 GitHub CLI authenticated as tpeak5237; repository `tpeak5237/laugh` was not found. Cloudflare OAuth can access the active theerapat.org zone and Workers account. There was no `laugh` Worker or matching Worker custom domain or route; public DNS did not resolve. Direct DNS-record listing returned 403. Deployment must use an interactive conflict check that refuses to replace a conflicting DNS record or unrelated origin. No other hostname is in the deployment config.
 
-## Pending release evidence
+## Release evidence
 
-Public repository anonymous access, deployment version/commit, HTTPS/TLS, runtime security headers, and live-domain browser smoke results are recorded only after publication. None of the local checks above implies deployment success.
+Public repository anonymous access, deployed version/source commit, HTTPS/TLS, runtime security headers and the live browser results are now recorded in RELEASE.md and live-smoke.json. None of the local checks alone implies deployment success.
 
 ## First live deployment finding and correction
 

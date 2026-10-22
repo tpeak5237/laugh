@@ -38,7 +38,7 @@ npm run deploy:dry
 
 `check` runs strict TypeScript, a production Vite build, 13 deterministic/secure-provider engine tests, and 48 browser regression cases (45 run, 3 explicitly skipped) across Chromium/WebKit at mobile, tablet and desktop sizes. Browser tests cover validation, automatic generation, reroll, exact copy, error recovery, 10,000 digits, keyboard operation, reduced motion, wrapping and axe WCAG A/AA checks. Real OS clipboard readback is exercised in Chromium; WebKit uses a clipboard contract test because Playwright cannot grant its clipboard permission. CI runs verification, never deploys automatically.
 
-See [verification](docs/VERIFICATION.md) for actual results and limitations. Desktop browser emulation is not physical-phone testing.
+See the [release handoff](docs/RELEASE.md) and [verification](docs/VERIFICATION.md) for actual results and limitations. Desktop browser emulation is not physical-phone testing.
 
 ## Structure and contracts
 
