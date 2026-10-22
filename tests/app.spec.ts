@@ -118,3 +118,22 @@ test('real Chromium clipboard integration', async ({ page, context, browserName 
   await expect(page.getByRole('button', { name: 'คัดลอกแล้ว!' })).toBeVisible();
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(expected);
 });
+
+test('page has no CSP console errors, inline scripts or external application requests', async ({ page }) => {
+  const errors: string[] = [];
+  const external: string[] = [];
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('request', request => {
+    if (new URL(request.url()).origin !== new URL(process.env.TEST_BASE_URL ?? 'http://127.0.0.1:4319').origin) external.push(request.url());
+  });
+  const response = await page.goto('/');
+  await page.evaluate(() => document.fonts.ready);
+  await expect(output(page)).toHaveText(/^\d{50}$/);
+  await expect(page.locator('script:not([src])')).toHaveCount(0);
+  expect(errors).toEqual([]);
+  expect(external).toEqual([]);
+  if (process.env.TEST_BASE_URL) {
+    expect(response!.headers()['cache-control']).toContain('no-transform');
+    expect(response!.headers()['content-security-policy']).not.toContain('unsafe-inline');
+  }
+});

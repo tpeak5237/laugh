@@ -36,7 +36,7 @@ npm run check
 npm run deploy:dry
 ```
 
-`check` runs strict TypeScript, a production Vite build, 13 deterministic/secure-provider engine tests, and browser regression tests across Chromium/WebKit at mobile, tablet and desktop sizes. Browser tests cover validation, automatic generation, reroll, exact copy, error recovery, 10,000 digits, keyboard operation, reduced motion, wrapping and axe WCAG A/AA checks. Real OS clipboard readback is exercised in Chromium; WebKit uses a clipboard contract test because Playwright cannot grant its clipboard permission. CI runs verification, never deploys automatically.
+`check` runs strict TypeScript, a production Vite build, 13 deterministic/secure-provider engine tests, and 48 browser regression cases (45 run, 3 explicitly skipped) across Chromium/WebKit at mobile, tablet and desktop sizes. Browser tests cover validation, automatic generation, reroll, exact copy, error recovery, 10,000 digits, keyboard operation, reduced motion, wrapping and axe WCAG A/AA checks. Real OS clipboard readback is exercised in Chromium; WebKit uses a clipboard contract test because Playwright cannot grant its clipboard permission. CI runs verification, never deploys automatically.
 
 See [verification](docs/VERIFICATION.md) for actual results and limitations. Desktop browser emulation is not physical-phone testing.
 
@@ -46,7 +46,7 @@ See [verification](docs/VERIFICATION.md) for actual results and limitations. Des
 - `src/rng.ts`: length validation and weighted rejection sampler.
 - `src/main.ts`: DOM state, regeneration, counts and clipboard recovery.
 - `src/style.css`: responsive layout and selected design.
-- `public/_headers`: Cloudflare CSP and browser security headers.
+- `public/_headers`: Cloudflare CSP, browser security headers and HTML no-transform protection against automatic script injection.
 - `tests/`: independent engine and browser regression tests.
 - `wrangler.jsonc`: asset-only Worker and the single custom domain.
 
