@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.wrangler/
+.env
+.env.*
+!.env.example
+.serena/
+.playwright-mcp/
+playwright-report/
+test-results/
+.DS_Store
+.impeccable/decisions/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/build/
+.impeccable/config.local.json
+.impeccable/questions/

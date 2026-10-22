@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22T00:00:00+07:00",
+  "title": "Design System: Laughing Seed",
+  "extensions": {
+    "colorMeta": {
+      "ink": { "role": "neutral", "displayName": "Near-Black Ink", "canonical": "#0a0908", "tonalRamp": ["oklch(15% 0.005 60)", "oklch(25% 0.005 60)", "oklch(35% 0.005 60)", "oklch(45% 0.005 60)", "oklch(55% 0.005 60)", "oklch(65% 0.005 60)", "oklch(80% 0.005 60)", "oklch(95% 0.005 60)"] },
+      "acid-yellow": { "role": "primary", "displayName": "Acid Yellow", "canonical": "#e9f83a", "tonalRamp": ["oklch(15% 0.18 115)", "oklch(25% 0.18 115)", "oklch(35% 0.18 115)", "oklch(45% 0.18 115)", "oklch(55% 0.18 115)", "oklch(65% 0.18 115)", "oklch(80% 0.18 115)", "oklch(95% 0.12 115)"] },
+      "laughter-pink": { "role": "secondary", "displayName": "Laughter Pink", "canonical": "#f873bb", "tonalRamp": ["oklch(15% 0.12 345)", "oklch(25% 0.12 345)", "oklch(35% 0.12 345)", "oklch(45% 0.12 345)", "oklch(55% 0.12 345)", "oklch(65% 0.12 345)", "oklch(80% 0.12 345)", "oklch(95% 0.06 345)"] },
+      "pink-hover": { "role": "secondary", "displayName": "Pink Hover", "canonical": "#ff9ace", "tonalRamp": ["oklch(15% 0.12 345)", "oklch(25% 0.12 345)", "oklch(35% 0.12 345)", "oklch(45% 0.12 345)", "oklch(55% 0.12 345)", "oklch(65% 0.12 345)", "oklch(80% 0.12 345)", "oklch(95% 0.06 345)"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(45% 0 0)", "oklch(55% 0 0)", "oklch(65% 0 0)", "oklch(80% 0 0)", "oklch(95% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Output Display", "purpose": "Generated digits; Lilita One 400 with Kanit fallback." },
+      "headline": { "displayName": "Thai Headline", "purpose": "Hero statement; Mitr 700 is loaded while CSS requests weight 900." },
+      "body": { "displayName": "Functional Copy", "purpose": "Kanit 400, 600, and 900 are loaded for copy and controls." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "output-jolt", "value": "180ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Brief regeneration feedback; omitted when reduced motion is preferred." },
+      { "name": "button-press", "value": "translateY(1px)", "purpose": "Small active-state response on buttons." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "max-width: 359px" },
+      { "name": "wide", "value": "min-width: 640px" },
+      { "name": "tall-portrait", "value": "min-width: 640px and max-aspect-ratio: 3/5" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Pink, bold action used to generate a fresh result.",
+      "html": "<button class=\"ds-primary\" type=\"button\">ขำใหม่อีกที</button>",
+      "css": ".ds-primary { background: #f873bb; color: #0a0908; border: 2px solid transparent; border-radius: 9px; min-height: 47px; padding: 8px 14px; cursor: pointer; font: 600 22px/1.2 Kanit, sans-serif; } .ds-primary:hover { background: #ff9ace; } .ds-primary:active { transform: translateY(1px); } .ds-primary:focus-visible { outline: 3px solid #0a0908; outline-offset: 5px; } @media (min-width: 640px) { .ds-primary { min-height: 58px; font-size: 24px; } }"
+    },
+    {
+      "name": "Secondary Action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined copy action beside the primary action on wide screens.",
+      "html": "<button class=\"ds-secondary\" type=\"button\">คัดลอก</button>",
+      "css": ".ds-secondary { background: transparent; color: #0a0908; border: 2px solid #0a0908; border-radius: 9px; min-height: 47px; padding: 8px 14px; cursor: pointer; font: 600 22px/1.2 Kanit, sans-serif; } .ds-secondary:hover { background: #0a0908; color: #e9f83a; } .ds-secondary:active { transform: translateY(1px); } .ds-secondary:focus-visible { outline: 3px solid #0a0908; outline-offset: 5px; } @media (min-width: 640px) { .ds-secondary { min-height: 58px; font-size: 24px; } }"
+    },
+    {
+      "name": "Length Field",
+      "kind": "input",
+      "refersTo": "length-input",
+      "description": "White numeric-entry field with an ink outline.",
+      "html": "<label class=\"ds-label\" for=\"ds-length\">ความยาวเสียงขำ</label><input class=\"ds-input\" id=\"ds-length\" inputmode=\"numeric\" value=\"50\" />",
+      "css": ".ds-label { display: block; margin-bottom: 4px; color: #0a0908; font: 600 16px/1.2 Kanit, sans-serif; } .ds-input { width: 100%; border: 2px solid #0a0908; border-radius: 8px; background: #fff; color: #0a0908; padding: 8px 13px; font: 400 23px/1.25 Kanit, sans-serif; caret-color: #0a0908; } .ds-input:focus-visible { outline: 3px solid #0a0908; outline-offset: 5px; } .ds-input[aria-invalid=\"true\"] { border-style: dashed; }"
+    },
+    {
+      "name": "Generated Output",
+      "kind": "custom",
+      "description": "Oversized, selectable digits in a scrollable region.",
+      "html": "<div class=\"ds-output\" role=\"region\" aria-label=\"เสียงขำที่สุ่มได้\" tabindex=\"0\">5555555555</div>",
+      "css": ".ds-output { width: 100%; max-height: min(34svh, 310px); overflow: auto; padding: 4px 5px 7px; color: #0a0908; font: 400 17.4cqw/.96 'Lilita One', Kanit, sans-serif; letter-spacing: -.04em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; word-break: break-all; transform: rotate(-2deg); } .ds-output:focus-visible { outline: 3px solid #0a0908; outline-offset: 5px; } @media (min-width: 640px) { .ds-output { max-height: 24svh; font-size: 8.8cqw; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Chaotic Internet Sticker Sheet",
+    "overview": "Laughing Seed treats its generated digits as the punchline: oversized, tightly set, and playfully skewed on one continuous acid-yellow field. Thai copy leads; pink accents and hand-lettered English details give the utility the energy of a chat sticker without turning it into a dashboard.\n\nThe current interface is a single semantic, selectable typographic surface. It keeps the length control and actions close to the output, lets long results scroll inside their own region, and adapts the same sheet to narrow phones, wide screens, and tall portrait displays. A brief output jolt accompanies regeneration and respects reduced-motion preferences.",
+    "keyCharacteristics": [
+      "Acid yellow, near-black, and hot pink carry the full visual identity.",
+      "Thai headlines and body copy pair with a rounded Latin display face for digits.",
+      "Oversized type, slight rotation, and skew create the controlled-chaos effect.",
+      "One continuous sheet keeps the generator direct and mobile-first."
+    ],
+    "rules": [
+      { "name": "The Three-Ink Rule", "body": "Keep the yellow, near-black, and pink relationship dominant; white belongs to the input surface.", "section": "colors" },
+      { "name": "The Output-Owns-Type Rule", "body": "Keep the generated number string the largest type on the sheet; reserve the Thai headline as the supporting setup.", "section": "typography" }
+    ],
+    "dos": [
+      "Do keep the main lettering and generated digits as selectable semantic text.",
+      "Do preserve the yellow ground, near-black ink, and pink action relationship.",
+      "Do keep the output scrollable and the actions reachable at every viewport size.",
+      "Do retain visible keyboard focus and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't add card stacks, decorative glass, or dashboard framing to this single-sheet utility.",
+      "Don't replace the actual generated digits or Thai lettering with raster artwork.",
+      "Don't claim screenshot-level numeric hero fidelity is complete while the review gate remains open."
+    ]
+  }
+}

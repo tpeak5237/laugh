@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e9f83a" />
+    <meta name="description" content="ขำจนเลขตามไม่ทัน — สุ่มเสียงขำ 1–10,000 หลักด้วย Web Crypto แล้วคัดลอกไปขำต่อ ไม่ต้องสมัครสมาชิก" />
+    <meta property="og:title" content="Laughing Seed — ขำจนเลขตามไม่ทัน" />
+    <meta property="og:description" content="ขำหนัก ไม่จำเป็นต้องมี 5 เยอะ สุ่มเสียงขำแล้วส่งต่อได้เลย" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://laugh.theerapat.org/" />
+    <link rel="canonical" href="https://laugh.theerapat.org/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Laughing Seed — ขำจนเลขตามไม่ทัน</title>
+  </head>
+  <body>
+    <div class="sheet">
+      <header class="brand" aria-label="Laughing Seed">
+        <span class="brand-mark" aria-hidden="true">ha<svg viewBox="0 0 60 25" focusable="false"><path d="M8 20 2 15M27 12 23 2M45 17 50 6" /></svg></span>
+        <span class="brand-name" lang="en">Laughing<br />Seed</span>
+      </header>
+      <main>
+        <h1><span>ขำจนเลข</span><span>ตามไม่ทัน</span></h1>
+        <section class="laughter" aria-label="เครื่องสุ่มเสียงขำ">
+          <div class="tag-wrap"><span class="tag">5 ไปไหน</span></div>
+          <div id="output" class="output" role="region" aria-label="เสียงขำที่สุ่มได้" tabindex="0"></div>
+          <p class="counts"><span><b id="digit-count">0</b> หลัก</span><span aria-hidden="true"> · </span><span>เลข 5: <b id="five-count">0</b> ตัว</span></p>
+          <form id="generator" novalidate>
+            <label for="length">ความยาวเสียงขำ</label>
+            <input id="length" name="length" type="text" inputmode="numeric" pattern="[0-9]+" value="50" maxlength="6" autocomplete="off" spellcheck="false" aria-describedby="length-help length-error" />
+            <p id="length-help" class="helper">1–10,000 หลัก</p>
+            <p id="length-error" class="error" role="alert" hidden></p>
+            <div class="actions">
+              <button id="reroll" type="submit" tabindex="0">ขำใหม่อีกที</button>
+              <button id="copy" class="secondary" type="button" tabindex="0" disabled>คัดลอก</button>
+            </div>
+          </form>
+          <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+      </main>
+      <footer>
+        <p>ขำหนัก ไม่จำเป็นต้องมี 5 เยอะ</p>
+        <details>
+          <summary><span lang="en">Web Crypto · P(5) = 1/901</span></summary>
+          <p>สุ่มในเครื่องด้วย <span lang="en">crypto.getRandomValues()</span> และ rejection sampling เพื่อลดอคติจากการหารเอาเศษ เลข 5 มีน้ำหนัก 1 ส่วนเลขอื่นแต่ละตัวมีน้ำหนัก 100 จากทั้งหมด 901</p>
+          <p>นี่คือการสุ่มเทียมเชิงเข้ารหัสแบบถ่วงน้ำหนัก ไม่ใช่เลขฐานสิบที่มีโอกาสเท่ากัน และไม่ใช่การสุ่มจากปรากฏการณ์ทางกายภาพ แต่ละหลักสุ่มแยกกันโดยไม่บังคับเติมหรือลบเลข 5 ผลลัพธ์จึงอาจไม่มีเลข 5 เลยก็ได้</p>
+          <p>ไม่มีบัญชีผู้ใช้ ไม่มีตัวติดตาม และไม่ส่งเสียงขำออกจากเครื่อง ปุ่มคัดลอกจะเขียนเฉพาะข้อความตัวเลขลงคลิปบอร์ดเมื่อคุณกดเท่านั้น</p>
+        </details>
+      </footer>
+      <noscript><p class="error">เปิด JavaScript เพื่อสุ่มเสียงขำในเบราว์เซอร์ของคุณ</p></noscript>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
